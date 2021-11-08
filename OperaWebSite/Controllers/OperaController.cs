@@ -7,10 +7,12 @@ using System.Web.Mvc;
 using OperaWebSite.Models; //a
 using OperaWebSite.Data; // a
 using System.Data.Entity; // a
-
+using System.Diagnostics; //A
+using OperaWebSite.Filters;//a
 
 namespace OperaWebSite.Controllers
 {
+    [MyFilterAction]
     public class OperaController : Controller
     {
         // Crear Instancia del dbcontext 
@@ -126,6 +128,21 @@ namespace OperaWebSite.Controllers
                 return RedirectToAction("Index");
             }
             return View("Edit", opera);
+        }
+
+        //TODO Falto lo de years
+
+       public ActionResult SearchByYear(int year)
+        {
+            if (year == 0)
+            {
+                return RedirectToAction("Index");
+            }
+            List<Opera> operaYears = (
+                from o in context.Operas
+                where o.Year == year
+                select o).ToList();
+            return View("Index", operaYears);
         }
     }
 }

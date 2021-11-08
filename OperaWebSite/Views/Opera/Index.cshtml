@@ -8,6 +8,18 @@
 </head>
 <body>
     <p> @Html.ActionLink("Create New","Create","Opera")</p>
+
+    @using (Html.BeginForm("SearchByYear", "Opera", FormMethod.Get))
+            {
+                @Html.Label("Year:")
+                @Html.TextBox("year", 0)
+
+            <input type="submit" value="Get" />
+            }
+    @using (Html.BeginForm("Index", "Opera", FormMethod.Get))
+            {
+            <input type="submit"  value="Get All" />
+            }
     <table>
         <tr>
             <th>@Html.DisplayNameFor(model => model.Title)  </th>
