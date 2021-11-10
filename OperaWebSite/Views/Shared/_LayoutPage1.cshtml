@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/main.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <div id="banner">
+        </div>
+        <div id="login">
+            <h3>Login</h3>
+            <div>
+                <label>Nombre</label>
+                <input type="text">
+            </div>
+            <div>
+                <label>Email</label> <input type="email">
+            </div>
+            <br>
+            <button class="btn">
+                Enviar
+            </button>
+        </div>
+    </header>
+    <div id="menu">
+        <div>
+            @Html.ActionLink("Inicio", "Index", "Home")
+        </div>
+
+        <div>
+            @Html.ActionLink("Operas", "Index", "Opera")
+        </div>
+        <div>
+            @Html.ActionLink("Empleados", "Index", "Opera")
+        </div>
+    </div>
+    <main>
+        <div id="izq">
+
+            @if (IsSectionDefined("sideBarIzq"))
+            {
+                @RenderSection("sideBarIzq")
+            }
+            else
+            {
+                <article>
+                    <h1>Opera House</h1>
+                    <h2>Historia del Teatro</h2>
+                    <p>
+                        La Ópera de Sídney, situada en la ciudad de Sídney, estado de Nueva Gales del Sur, Australia, es uno de los edificios más famosos y distintivos del siglo xx.
+                    </p>
+                    <p>
+                        Declarado en 2007 Patrimonio de la Humanidad, fue diseñado por el arquitecto danés Jørn Utzon en 1957 e inaugurado el 20 de octubre de 1973.
+                    </p>
+
+                </article>
+            }
+
+        </div>
+        <div id="content">
+            @RenderBody()
+        </div>
+        <div class="der">
+
+            @if (IsSectionDefined("sideBarDer"))
+            {
+                @RenderSection("sideBarDer")
+            }
+            else
+            {
+                <div>
+                    <img src="~/Images/OperasidneyInt1.jpg" alt="Interior1" />
+                </div>
+                <div>
+                    <img src="~/Images/240px-SydneyInt2.jpg" alt="Interior2" />
+                </div>
+                <div>
+                    <img src="~/Images/OperasidneyInt3.jpg" alt="Interior3" />
+                </div>
+            }
+
+        </div>
+    </main>
+    <div id="footer">
+        <p>email@sistema.com</p>
+    </div>
+</body>
+</html>

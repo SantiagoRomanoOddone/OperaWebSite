@@ -27,9 +27,36 @@
             @Html.ValidationMessageFor(model => model.Year)
         </div>
         <p>
-            <input type="submit"  value="Save" />
+            <input type="submit" value="Save" />
         </p>
     }
     @Html.ActionLink("Back to List", "Index", "Opera")
+
+    @section sideBarDer {
+        <h2>Los compositores de Ópera más famosos:</h2>
+
+        <div>
+            <img src="~/Images/GP.jpg" alt="Giacomo Puccini" />
+            <a href="https://es.wikipedia.org/wiki/Giacomo_Puccini">Giacomo Puccini</a>
+        </div>
+        <div>
+            <img src="~/Images/AM.jpg" alt="Wolfgang Amadeus Mozart" />
+            <a href="https://es.wikipedia.org/wiki/Wolfgang_Amadeus_Mozart">Wolfgang Amadeus Mozart</a>
+        </div>
+
+    }
+    @section SideBarIzq {
+
+        <h2>Óperas Famosas de Mozart</h2>
+        <ul>
+            <li><a href="https://www.youtube.com/watch?v=rxGy83aipbY">La reina de la noche de "La flauta mágica"</a></li>
+
+            <li><a href="https://www.youtube.com/watch?v=WK9Ra098yuI">Obertura de Las bodas de Fígaro</a></li>
+
+            <li><a href="https://www.youtube.com/watch?v=DdIZM8dtPp0">Obertura de Don Giovanni</a></li>
+
+        </ul>
+
+    }
 </body>
 </html>

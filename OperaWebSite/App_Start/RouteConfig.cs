@@ -14,17 +14,17 @@ namespace OperaWebSite
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
 
-            routes.MapRoute(
-                name: "Login",
-                url: "{controller}/{action}/{name}/{role}",
-                defaults: new { controller = "Test", action = "Login" }
-                );
+            //routes.MapRoute(
+            //    name: "Login",
+            //    url: "{controller}/{action}/{name}/{role}",
+            //    defaults: new { controller = "Test", action = "Login" }
+            //    );
 
-            routes.MapRoute(
-               name: "SearchByTitle",
-               url: "{controller}/{action}/{title}",
-               defaults: new { controller = "Test", action = "SearchByTitle" }
-              );
+            //routes.MapRoute(
+            //   name: "SearchByTitle",
+            //   url: "{controller}/{action}/{title}",
+            //   defaults: new { controller = "Test", action = "SearchByTitle" }
+            //  );
 
 
 

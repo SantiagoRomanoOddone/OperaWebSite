@@ -13,11 +13,14 @@ namespace OperaWebSite.Controllers
         [MyFilterAction]
         public ActionResult Index()
         {
+            ViewBag.Fecha = DateTime.Now.ToLongDateString();
+            ViewBag.Hora = DateTime.Now.ToLongTimeString();
             return View();
         }
         public ActionResult About()
         {
             return View();
         }
+       
     }
 }

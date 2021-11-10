@@ -1,0 +1,88 @@
+﻿body {
+    margin: 10px;
+    box-sizing: border-box;
+}
+header {
+    display: flex;
+}
+#banner {
+    background-image: url(../Images/OperaPortada.jpg);
+    width: 70%;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+#login {
+    background-color: lightcyan;
+    width: 30%;
+    height: 200px;
+    padding-left: 10PX;
+    text-align: center;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+}
+#menu {
+    display: flex;
+    background-color: cornflowerblue;
+    color: darkblue;
+    border: double 2px lightcyan;
+    width: 100%;
+    height: 30px;
+    justify-content: flex-end;
+    align-items: center;
+}
+    #menu div {    
+        text-decoration: none;
+        color: white;
+        border: 1px solid black;
+        margin-right: 10px;
+        background-color: lightgray;
+        padding: 3px;
+        border-radius:3px;
+
+    }
+#izq {
+    background-color: #b45008;
+    width: 25%;
+    color: white;
+    padding: 10px;
+}
+h1{
+    text-align:center;
+}
+h2{
+    text-align: center;
+}
+#content {
+    width: 50%;
+    padding: 10px;
+    text-align: left;
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.der {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: center;
+    background-color: #b45008;
+}
+.der img {
+         width: 80%;     
+        margin-bottom: 5px;
+        
+    }
+#footer {
+    display: flex;
+    background-color: cornflowerblue;
+    color: white;
+    width: 100%;
+    text-align: right;
+    height: 100px;
+    justify-content: space-around;
+}
